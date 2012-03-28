@@ -15,4 +15,5 @@ module CoffeeScript
 
 end
 
-puts CoffeeScript.compile(File.open(ARGV[0], "rb").read)
+puts CoffeeScript.compile(File.open(ARGV[0], "rb"))
+

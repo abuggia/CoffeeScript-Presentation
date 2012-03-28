@@ -1,4 +1,3 @@
-.DS_Store
-.svn
-log/*.log
-tmp/**
+*.DS_Store
+.idea/
+
