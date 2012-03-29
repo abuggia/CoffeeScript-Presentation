@@ -23,8 +23,8 @@ futurists =
 console.log "#{name} lives on #{street}"
 
 
-
-tags = "<h2> <h2>Attention</h2> <span>CoffeeScript=Awesome</span> </h2>"
+# works with splats
+tags = "<body> <h2>Attention</h2> <span>CoffeeScript=Awesome</span> </body>"
 
 [open, contents..., close] = tags.split(" ")
 
