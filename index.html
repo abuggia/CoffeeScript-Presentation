@@ -127,40 +127,41 @@
 				</section>
 				
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-	var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
-					document.body.style['MozPerspective'] !== undefined ||
-					document.body.style['perspective'] !== undefined;
+					<h2>Example - Character Matching</h2>
+					<pre><code>
+matchAt = (s, frag, i) ->
+  s[i...i+frag.length] == frag
 
-	function linkify( selector ) {
-	    if( supports3DTransforms ) {
-	        
-	        var nodes = document.querySelectorAll( selector );
+startsWith = (s, frag) ->
+  matchAt s, frag, 0
 
-	        for( var i = 0, len = nodes.length; i < len; i++ ) {
-	            var node = nodes[i];
+endsWith = (s, frag) ->
+  matchAt s, frag, s.length - frag.length
 
-	            if( !node.className || !node.className.match( /roll/g ) ) {
-	                node.className += ' roll';
-	                node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
-	            }
-	        };
-	    }
-	}
+matchLocations = (s, frag) ->
+  (i for i in [0..s.length - frag.length] when matchAt s, frag, i)
 
-	linkify( 'a' );
+console.log startsWith "tacoloco", "taco" # true
+console.log startsWith "taco", "tacoloco" # false
+console.log startsWith "tacoloco", "talk" # false
+console.log endsWith "tacoloco", "loco" # true
+console.log endsWith "loco", "tacoloco" # false
+console.log endsWith "tacoloco", "yoco" # false
+console.log matchLocations "bababab", "bab" # [0,2,4]
+console.log matchLocations "xxx", "x" # [0,1,2]
 					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<p>Courtesy of <a href="http://rosettacode.org/wiki/Character_matching#CoffeeScript">Rosetta Code</a>.</p>
 				</section>
+        
+        
+			<section>
+        <h2><a href="http://coffeescript.org/">COFFEESCRIPT.ORG</a></h2>
+        <a href="http://coffeescript.org/"><img src="img/coffeescript.org.png"></a>
+			</section>
 				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+			<section>
+        <img src="img/string-matching-coffeescript-versus-javascript.png" height="357" width="810">
+			</section>
 
 				<section>
 					<h2>Fragmented Views</h2>
@@ -190,8 +191,10 @@
 				</section>
 				
 				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
+					<h2>Credits</h2>
+					<h3 class="inverted"></h3>
+          
+          <a href="http://svg-edit.googlecode.com/svn/trunk/editor/svg-editor.html">SVG Edit</a>
 				</section>
 			</div>
 
