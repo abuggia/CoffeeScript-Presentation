@@ -1,4 +1,4 @@
 
 var square = function(x) {
-  return x * x	
+  return x * x;
 }
