@@ -1,0 +1,17 @@
+
+
+.bullets ul li, .bullets h4 {
+   text-align: left ! important;
+   clear:both;
+}
+
+.bullets ul {
+  float:left;
+  clear:both;
+  margin-bottom: 40px !important;
+}
+
+.bullets h4 {
+    margin-bottom: 5px !important;
+}
+
