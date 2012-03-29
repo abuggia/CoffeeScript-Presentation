@@ -1,5 +1,6 @@
 class Animal
-  constructor: (@name) ->
+  constructor: (name) ->
+    @name = name
 
   move: (meters) ->
     console.log @name + " moved #{meters}m."

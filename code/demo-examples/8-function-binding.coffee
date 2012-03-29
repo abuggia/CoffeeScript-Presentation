@@ -8,6 +8,6 @@ Account = (customer, cart) ->
   @cart = cart
 
   $('.shopping_cart').bind 'click', (event) =>
-    @customer.purchase @cart
+    customer.purchase @cart
 
 
